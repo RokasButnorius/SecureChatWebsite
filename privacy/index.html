@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — Secure Chat (SEC)</title>
+<meta name="description" content="Privacy Policy for Secure Chat (SEC)." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#e6f6ee;
+    --card:#ffffff;
+    --ink:#0e2f2b;
+    --ink-soft:#3c5f59;
+    --green:#12a06a;
+    --green-deep:#0b7a4f;
+    --blue:#1f6feb;
+    --blue-deep:#17509f;
+    --line:#0e2f2b;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    min-height:100vh;
+    color:var(--ink);
+    font-family:"Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background:
+      radial-gradient(900px 520px at 18% -10%, rgba(255,255,255,.32), transparent 65%),
+      linear-gradient(90deg,
+        #8fe0be 0%,
+        #74d3bd 28%,
+        #66bfd6 58%,
+        #78a9ee 82%,
+        #8fb4f6 100%);
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+
+  body::before{
+    content:"";
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:radial-gradient(rgba(14,47,43,.14) 1px, transparent 1px);
+    background-size:20px 20px;
+    opacity:.35;
+  }
+
+  .wrap{ position:relative; z-index:1; max-width:820px; margin:0 auto; padding:36px 20px 64px; }
+
+  .back{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:9px 14px; margin-bottom:22px;
+    border-radius:12px; text-decoration:none; color:var(--ink);
+    background:var(--card); border:2px solid var(--line);
+    box-shadow:3px 3px 0 var(--line);
+    font-size:.86rem; font-weight:600;
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .back:hover{ transform:translate(-1.5px,-1.5px); box-shadow:5px 5px 0 var(--line); }
+
+  h1{
+    font-size:clamp(1.7rem, 5vw, 2.4rem);
+    line-height:1.05; margin:0 0 8px; letter-spacing:-.03em; font-weight:700;
+  }
+  .sub{ margin:0 0 26px; color:var(--ink-soft); font-size:.92rem; }
+  .sub a{ color:var(--green-deep); }
+
+  .card{
+    background:var(--card);
+    border:2px solid var(--line);
+    border-radius:20px;
+    box-shadow:5px 5px 0 var(--line);
+    padding:clamp(20px, 4vw, 34px);
+  }
+
+  h2{
+    font-size:1.02rem; letter-spacing:.02em; text-transform:uppercase;
+    margin:30px 0 10px; padding-bottom:8px;
+    border-bottom:2px dashed rgba(14,47,43,.18);
+  }
+  h2:first-of-type{ margin-top:0; }
+
+  p{ margin:0 0 12px; }
+  ul{ margin:0 0 14px; padding-left:22px; }
+  li{ margin:0 0 6px; }
+
+  .summary{ background:#f2fbf6; border-left:4px solid var(--green); border-radius:8px; padding:14px 18px; }
+  .summary ul{ margin:0; }
+
+  .note{
+    margin-top:26px; padding:12px 16px;
+    background:#f4f8ff; border-left:4px solid var(--blue);
+    border-radius:8px; font-size:.88rem; color:var(--ink-soft);
+  }
+
+  .contact{ display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+  .contact a{
+    display:inline-block; padding:8px 14px; border-radius:11px;
+    background:var(--card); border:2px solid var(--line);
+    box-shadow:3px 3px 0 var(--line);
+    color:var(--ink); text-decoration:none; font-size:.86rem; font-weight:600;
+  }
+
+  footer{
+    margin-top:38px; padding-top:18px;
+    border-top:2px dashed rgba(14,47,43,.28);
+    font-size:.82rem; color:var(--ink-soft);
+    display:flex; flex-wrap:wrap; gap:8px; justify-content:space-between;
+  }
+
+  @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <a class="back" href="/">&larr; Back to Secure Chat</a>
+
+  <h1>Privacy Policy</h1>
+  <p class="sub">
+    SEC (Secure Chat) &middot; Last updated 17 November 2026<br>
+    Developer: Rokas Butnorius &middot; <a href="https://securechatsec.vercel.app/">securechatsec.vercel.app</a>
+  </p>
+
+  <div class="card">
+
+    <p>
+      This Privacy Policy explains how SEC (Secure Chat) handles information
+      when you use the desktop or mobile client or connect to the official relay.
+    </p>
+
+    <h2>1. Summary</h2>
+    <div class="summary">
+      <ul>
+        <li>Message content is end-to-end encrypted. The server cannot read your messages.</li>
+        <li>Private keys never leave your device.</li>
+        <li>The server can see limited metadata (who you message, groups, online status, public keys, and optional profile information).</li>
+        <li>Anonymous mode creates a temporary identity with almost no permanent storage.</li>
+        <li>This is still an early experimental project and has not been independently audited.</li>
+      </ul>
+    </div>
+
+    <h2>2. Information We Process</h2>
+
+    <p><strong>Stored only on your device</strong></p>
+    <ul>
+      <li>Private keys and Double Ratchet session data</li>
+      <li>Encrypted local vault (protected by your passphrase)</li>
+      <li>Optional &ldquo;remember me&rdquo; unlock data (uses platform protection such as Windows DPAPI when available)</li>
+    </ul>
+
+    <p><strong>Processed by the official relay (wss://relay.flashchat.store)</strong></p>
+    <ul>
+      <li>User ID you choose</li>
+      <li>Public cryptographic keys needed for encryption</li>
+      <li>Optional profile (bio + avatar)</li>
+      <li>Contacts and group membership</li>
+      <li>Online / offline status</li>
+      <li>Encrypted message envelopes (temporary queue only)</li>
+      <li>Call signalling (forwarded, not stored long-term)</li>
+    </ul>
+
+    <p>
+      We do not collect message content, private keys, passphrases, real name,
+      email, phone number, or location.
+    </p>
+
+    <h2>3. How We Use the Information</h2>
+    <p>
+      Only to operate the messaging and calling service: deliver encrypted
+      messages, maintain contacts/groups/presence, and keep the relay working.
+      We do not sell data or use it for advertising.
+    </p>
+
+    <h2>4. End-to-End Encryption</h2>
+    <p>
+      SEC uses X3DH-style key agreement + Double Ratchet with XChaCha20-Poly1305.
+      Voice/video calls (desktop) use WebRTC with DTLS-SRTP. All encryption
+      happens on the user&rsquo;s device.
+    </p>
+
+    <h2>5. Data Retention</h2>
+    <ul>
+      <li>Encrypted messages are deleted from the server after the recipient acknowledges them.</li>
+      <li>Public keys, contacts, groups and profile remain while the account exists.</li>
+      <li>You can delete local data at any time by removing the vault/session files.</li>
+      <li>You can request deletion of server-side data by emailing the contact addresses above.</li>
+    </ul>
+
+    <h2>6. Your Rights</h2>
+    <p>You can:</p>
+    <ul>
+      <li>Use Anonymous mode</li>
+      <li>Delete local data yourself</li>
+      <li>Request deletion of your server-side account data</li>
+      <li>Access, correct or object to processing of your personal data (where applicable under GDPR)</li>
+    </ul>
+
+    <h2>7. Children&rsquo;s Privacy (Lithuania &amp; EU)</h2>
+    <p>
+      Under Lithuanian law implementing GDPR Article 8, the age of digital
+      consent is 14 years.
+    </p>
+    <ul>
+      <li>If you are under 14, processing of your personal data for this service normally requires consent from a parent or legal guardian.</li>
+      <li>From age 14 you can generally provide your own consent.</li>
+      <li>SEC is not specifically directed at children under 14. If we become aware that we have collected personal data from a child under 14 without appropriate consent, we will delete that data.</li>
+    </ul>
+    <p>
+      <em>Note:</em> Other countries have different ages &mdash; for example 13
+      under US COPPA or 16 in some EU countries. We follow the rules of the
+      user&rsquo;s country where possible.
+    </p>
+
+    <h2>8. Changes</h2>
+    <p>
+      We may update this policy. The &ldquo;Last updated&rdquo; date will change
+      when we do. Continued use means you accept the updated version.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>Privacy questions or data deletion requests:</p>
+    <div class="contact">
+      <a href="mailto:rokasbutnorius12@gmail.com">rokasbutnorius12@gmail.com</a>
+      <a href="mailto:b.rokas@yahoo.com">b.rokas@yahoo.com</a>
+    </div>
+    <p class="note">
+      Please write &ldquo;SEC Privacy&rdquo; or &ldquo;Data Request&rdquo; in the subject.
+    </p>
+
+    <h2>Source</h2>
+    <p>
+      The source code is available at
+      <a href="https://github.com/RokasButnorius/Flashchat-Rebranding-To-SEC-Secure-Chat">GitHub</a>.
+    </p>
+
+  </div>
+
+  <footer>
+    <span>Secure Chat &middot; SEC</span>
+    <span>Copyright &copy; 2026 Rokas Butnorius. All rights reserved.</span>
+  </footer>
+
+</div>
+</body>
+</html>
